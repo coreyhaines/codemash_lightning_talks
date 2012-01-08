@@ -14,6 +14,10 @@
 ActiveRecord::Schema.define(:version => 20120108013434) do
 
   create_table "proposals", :force => true do |t|
+    t.string   "name"
+    t.string   "email_address"
+    t.string   "twitter_handle"
+    t.text     "topic"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
