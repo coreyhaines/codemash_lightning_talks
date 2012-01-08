@@ -6,6 +6,6 @@ class ProposalsController < ApplicationController
 
   def create
     Proposal.create params[:proposal]
-    redirect_to proposals_url
+    redirect_to root_url
   end
 end
