@@ -41,3 +41,7 @@ group :test do
   gem 'database_cleaner'
   gem 'cucumber-rails'
 end
+
+group :production do
+  gem 'pg'
+end
