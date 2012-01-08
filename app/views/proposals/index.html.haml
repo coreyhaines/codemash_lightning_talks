@@ -4,7 +4,7 @@
   -@submitted_proposals.each do |proposal|
     %li.proposal=proposal.topic
 
-=form_for @proposal do |form|
+=form_for @new_proposal do |form|
   =form.label :name, "Name"
   =form.text_field :name
   =form.label :email_address, "Email Address"
