@@ -1,16 +1,29 @@
 %h1 Lightning Talks for Codemash 2012
 
-%ul.proposals
-  -@submitted_proposals.each do |proposal|
-    %li.proposal=proposal.topic
+%section.proposals
+  %header
+    %h1 Proposal Submitted So Far
+  %ul
+    -@submitted_proposals.each do |proposal|
+      %li.proposal
+        %header #{proposal.name} (#{proposal.twitter_handle})
+        %section.topic=proposal.topic
 
-=form_for @new_proposal do |form|
-  =form.label :name, "Name"
-  =form.text_field :name
-  =form.label :email_address, "Email Address"
-  =form.text_field :email_address
-  =form.label :twitter_handle, "Twitter Handle"
-  =form.text_field :twitter_handle
-  =form.label :topic, "Topic"
-  =form.text_area :topic
-  =form.submit "Submit my lightning talk"
+%section.new_proposal_form
+  %header
+    %h1 Submit your own lightning talk
+  =form_for @new_proposal do |form|
+    .field
+      =form.label :name, "Name"
+      =form.text_field :name
+    .field
+      =form.label :email_address, "Email Address"
+      =form.text_field :email_address
+    .field
+      =form.label :twitter_handle, "Twitter Handle"
+      =form.text_field :twitter_handle
+    .field
+      =form.label :topic, "Topic"
+      =form.text_area :topic
+    .buttons
+      =form.submit "Submit my lightning talk"
