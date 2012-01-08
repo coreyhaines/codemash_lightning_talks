@@ -1,5 +1,9 @@
 %h1 Lightning Talks for Codemash 2012
 
+%ul.proposals
+  -@submitted_proposals.each do |proposal|
+    %li.proposal=proposal.topic
+
 =form_for @proposal do |form|
   =form.label :name, "Name"
   =form.text_field :name

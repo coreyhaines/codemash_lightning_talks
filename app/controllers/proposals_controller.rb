@@ -1,5 +1,6 @@
 class ProposalsController < ApplicationController
   def index
+    @submitted_proposals = Proposal.all
     @proposal = Proposal.new
   end
 
