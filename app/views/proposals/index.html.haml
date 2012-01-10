@@ -51,7 +51,7 @@
 
 %section.proposals
   %header
-    %h1 Proposals Submitted So Far
+    %h1 #{pluralize @submitted_proposals.count, "Proposal"} Submitted So Far
   %ul
     -@submitted_proposals.each do |proposal|
       %li.proposal
