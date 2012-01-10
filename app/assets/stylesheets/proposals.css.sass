@@ -1,17 +1,3 @@
-.sidebar
-  float: right
-  width: 30%
-  header
-    font-size: 1.1em
-    img
-      float: right
-      margin-left: 5px
-  section
-    clear: both
-    li
-      margin-bottom: 5px
-
-
 .proposals
   width: 50%
   .proposal
@@ -28,6 +14,17 @@
   width: 400px
   padding: 5px 10px
   border: 1px dashed #FF7F00
-  .field #proposal_topic
-    height: 40px
+  .field
+    #proposal_topic
+      height: 40px
+    &.required
+      label:after
+        color: red
+        content: "*"
+    .field_with_errors
+      display: inline
+      input, textarea
+        background: #900
+        color: white
+
 

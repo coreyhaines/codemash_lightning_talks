@@ -24,16 +24,16 @@
   %header
     %h1 Submit your own lightning talk
   =form_for @new_proposal do |form|
-    .field
+    .field.required
       =form.label :name, "Name"
       =form.text_field :name
-    .field
+    .field.required
       =form.label :email_address, "Email Address"
       =form.text_field :email_address
     .field
       =form.label :twitter_handle, "Twitter Handle"
       =form.text_field :twitter_handle
-    .field
+    .field.required
       =form.label :topic, "Topic"
       =form.text_area :topic
     .buttons

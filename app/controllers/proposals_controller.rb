@@ -5,7 +5,13 @@ class ProposalsController < ApplicationController
   end
 
   def create
-    Proposal.create params[:proposal]
-    redirect_to root_url
+    @new_proposal = Proposal.create params[:proposal]
+
+    if @new_proposal.valid?
+      redirect_to root_url
+    else
+      @submitted_proposals = Proposal.all
+      render :index
+    end
   end
 end
