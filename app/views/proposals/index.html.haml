@@ -1,13 +1,24 @@
-%h1 Lightning Talks for Codemash 2012
-
-%section.proposals
+%section.sidebar
   %header
-    %h1 Proposals Submitted So Far
-  %ul
-    -@submitted_proposals.each do |proposal|
-      %li.proposal
-        %header #{proposal.name} (#{proposal.twitter_handle})
-        %section.topic=proposal.topic
+    =link_to image_tag("/images/logo-codemash.gif"), "http://codemash.org/"
+    %p Lightning Talks are 5-minute prepared talks. You can use slides, or not, and you can talk about anything you want. You can use the form on the left to submit your own talk. We'll be going through the talks in order of proposal.
+  %section
+    %h1 Details
+    %ul
+      %li
+        %b When:
+        Thursday night after dinner
+      %li
+        %b Length:
+        90 minutes
+      %li
+        %b Hosted By:
+        #{link_to "Corey Haines", "http://twitter.com/coreyhaines"}
+      %li
+        %b For More Info:
+        Watch #{link_to "Twitter", "http://twitter.com/codemash"} and the #{link_to "Google Group", "https://groups.google.com/forum/#!forum/codemash"}
+%header
+  %h1 Lightning Talks for Codemash 2012
 
 %section.new_proposal_form
   %header
@@ -27,3 +38,13 @@
       =form.text_area :topic
     .buttons
       =form.submit "Submit my lightning talk"
+
+%section.proposals
+  %header
+    %h1 Proposals Submitted So Far
+  %ul
+    -@submitted_proposals.each do |proposal|
+      %li.proposal
+        %header #{proposal.name} (#{proposal.twitter_handle})
+        %section.topic=proposal.topic
+
