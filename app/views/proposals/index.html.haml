@@ -45,6 +45,6 @@
   %ul
     -@submitted_proposals.each do |proposal|
       %li.proposal
-        %header #{proposal.name} (@#{twitter_handle_as_link(proposal.twitter_handle)})
+        %header #{proposal.name} (#{twitter_handle_as_link(proposal.twitter_handle)})
         %section.topic=proposal.topic
 
