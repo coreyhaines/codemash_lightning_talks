@@ -1,0 +1,7 @@
+%h1 Create an event
+
+=form_for @event do |form|
+  =form.label "Event name", :for => :event_name
+  =form.text_field :name
+  =form.submit "Create Event"
+
