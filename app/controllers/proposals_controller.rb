@@ -5,7 +5,6 @@ class ProposalsController < ApplicationController
   end
 
   def create
-    head :unauthorized and return
     @new_proposal = Proposal.create params[:proposal]
 
     if @new_proposal.valid?
